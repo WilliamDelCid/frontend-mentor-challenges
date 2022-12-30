@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ### Primary */
+
+    --moderate-violet: hsl(263, 55%, 52%);
+    --moderate-violet-opacity: hsla(263, 46%, 60%, 0.947);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* ### Neutral */
+    --font1: 'Barlow Semi Condensed', sans-serif;
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+   /* font-size: 13px; */
+   background-color: var(--light-grayish-blue);
+}
+
+.container{
+    padding: 40px 20px;
+    display: grid;
+    grid-template-rows: 400px 250px 230px 370px 440px;
+    gap: 30px;
+}
+
+.card{
+    width: 90%;
+    background-color: var(--moderate-violet);
+    border-radius: 6px;
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    margin: 0 auto;
+}
+
+.card--1{
+    background-image: none;
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.card--2{
+    background-image: none;
+    background-color: var(--white);
+}
+
+.card--3{
+    background-image: none;
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.card--4{
+    background-image: none;
+    background-color: var(--white);
+}
+
+.content__inter{
+    padding: 20px 30px;
+}
+
+
+
+.header{
+    display: flex;
+    gap: 10px;
+}
+
+.hero__img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: 2px solid var(--moderate-violet-opacity);
+}
+
+.text__div{
+    font-size: 12px;
+    color: var(--white);
+}
+
+.title--1{
+    color: var(--very-dark-grayish-blue);
+}
+
+
+
+.hero__subtitle{
+    color: var(--light-gray);
+}
+
+.content{
+    padding-top: 14px;
+}
+
+.hero__paragraph{
+ color: var(--white);
+ font-weight: bold;
+ font-size: 18px;
+}
+
+.paragraph--2{
+    color: var(--very-dark-blackish-blue);
+}
+
+.hero__second__paragraph{
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--light-grayish-blue);
+}
+
+.paragrahp--1{
+    font-size: 15px;
+}
+
+.paragraph--3{
+    color: var(--very-dark-grayish-blue);
+}
+
+@media (min-width: 767px){
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        "card1 card1 card2 card5"
+        "card3 card4 card4 card5";
+        gap: 10px;
+    }
+
+    .card{
+        grid-area: card1;
+        margin: 0;
+        width: 100%;
+        /* height: 250px; */
+    }
+    
+    .card--1{
+        grid-area: card2;
+    }
+    
+    .card--2{
+        grid-area: card3;
+    }
+    
+    .card--3{
+        grid-area: card4;
+    }
+    
+    .card--4{
+        grid-area: card5;
+    }
+
+
+}
